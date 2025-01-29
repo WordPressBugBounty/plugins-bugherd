@@ -3,8 +3,8 @@ Contributors: claytoncollie
 Tags: admin, administration, tracking, integration, api, bug, bugtracking, bugherd, bug-tracking, todo, projects, project-management
 Requires at least: 4.7
 Requires PHP: 5.6
-Tested up to: 6.4
-Stable tag: 1.0.9
+Tested up to: 6.6
+Stable tag: 1.0.12
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -69,7 +69,7 @@ BugHerd has 2-way integration with your favorite tools And we’re always adding
 
 == Get Started with a free trial ==
 
-Try BugHerd free for 14 days. You can get started at [https://bugherd.com/ ](https://bugherd.com/)
+Try BugHerd free for 7 days. You can get started at [https://bugherd.com/ ](https://bugherd.com/)
 
 == Screenshots ==
 
@@ -94,7 +94,7 @@ Try BugHerd free for 14 days. You can get started at [https://bugherd.com/ ](htt
 BugHerd is the world's simplest visual feedback tool for websites. You will never need to second guess what your client meant by the feedback they sent via email or on a spreadsheet.
 
 ## Do I need to signup?
-Yes, in order to use BugHerd, you will need to sign up for an account at [https://bugherd.com/](https://bugherd.com/). All BugHerd accounts come with a 14-day free trial, so that you have enough time to work out which plan you need for the work that you do. Our plans are available from $33/month.
+Yes, in order to use BugHerd, you will need to sign up for an account at [https://bugherd.com/](https://bugherd.com/). All BugHerd accounts come with a 7-day free trial, so that you have enough time to work out which plan you need for the work that you do. Our plans are available from $49/month.
 
 ## Do I need to install anything?
 Yes, you need to install the BugHerd WordPress plugin. It’s available on the [WordPress plugin library](https://wordpress.org/plugins/bugherd/#description) and you can install it directly from your WordPress Dashboard. Follow these [installation instructions](https://support.bugherd.com/hc/en-us/articles/360002180976-Install-the-BugHerd-Wordpress-plugin) for more information.
@@ -120,6 +120,18 @@ Absolutely! Our support team would love to help you out. You can email us at sup
 [View more information here](https://support.bugherd.com/en/articles/84872-Install-the-BugHerd-Wordpress-plugin).
 
 == Changelog ==
+
+= 1.0.12 =
+* Bump stable tag
+* Updated readme
+
+= 1.0.11 =
+* Bump stable tag
+* Updated readme
+
+= 1.0.10 =
+* Bump stable tag
+* Bump tested support to v6.6
 
 = 1.0.9 =
 * Bump stable tag
