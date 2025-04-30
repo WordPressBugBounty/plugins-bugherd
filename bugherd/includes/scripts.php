@@ -15,74 +15,74 @@ if ( ! defined( 'WPINC' ) ) {
  *
  * @param string $project_key BugHerd project Key.
  * @return string
- * @since 1.0.0
  */
 function bugherd_get_the_script( $project_key ) {
 	return sprintf(
-		// phpcs:disable
 		'<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=%s" async="true"></script>',
-		// phpcs:enable
 		esc_html( $project_key )
 	);
 }
 
-add_action( 'wp_head', 'bugherd_do_the_frontend_script' );
+/**
+ * Check if BugHerd should be disabled based on query parameters.
+ *
+ * Users can add `?disable_bugherd` (or any defined query params) to prevent BugHerd from loading.
+ *
+ * @return bool
+ */
+function is_bugherd_disabled_by_query() {
+	$query_params = get_option( 'bugherd_disable_query_params', 'disable_bugherd, bricks, elementor, no_bugherd' );
+	$disabled_params = array_map('trim', explode(',', $query_params)); // Convert to an array
+
+	foreach ( $disabled_params as $param ) {
+		if ( isset( $_GET[ $param ] ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
 /**
  * Add BugHerd integration code for the frontend.
- *
- * @return void
- * @since 1.0.0
  */
+add_action( 'wp_head', 'bugherd_do_the_frontend_script' );
 function bugherd_do_the_frontend_script() {
-	/**
-	 * Filter the project_key variable to support other methods of setting this value.
-	 *
-	 * @param string $project_key BugHerd project Key.
-	 * @return string
-	 * @since 1.0.0
-	 */
-	$project_key = apply_filters( 'bugherd_project_key', get_option( 'bugherd_project_key', '' ) );
+	$project_key = get_option( 'bugherd_project_key', '' );
 
-	if ( '' === $project_key ) {
+	// Prevent BugHerd from loading if any specified query parameter is present
+	if ( is_bugherd_disabled_by_query() ) {
 		return;
 	}
 
-	echo bugherd_get_the_script( $project_key ); // phpcs:ignore
+	if ( empty( $project_key ) ) {
+		return;
+	}
+
+	echo bugherd_get_the_script( $project_key ); 
 }
 
-add_action( 'admin_head', 'bugherd_do_the_admin_script' );
 /**
- * Add BugHerd integration code for the wp-admin.
- *
- * @return void
- * @since 1.0.0
+ * Add BugHerd integration code for wp-admin.
  */
+add_action( 'admin_head', 'bugherd_do_the_admin_script' );
 function bugherd_do_the_admin_script() {
-	/**
-	 * Filter the enable_admin variable to support other methods of setting this value.
-	 *
-	 * @param boolean $enable_admin BugHerd enable admin.
-	 * @return boolean
-	 * @since 1.0.0
-	 */
-	$enable_admin = apply_filters( 'bugherd_enable_admin', get_option( 'bugherd_enable_admin', false ) );
+	$enable_admin = filter_var( get_option( 'bugherd_enable_admin', false ), FILTER_VALIDATE_BOOLEAN );
 
+	// If admin mode is disabled in settings, don't load BugHerd
 	if ( ! $enable_admin ) {
 		return;
 	}
 
-	/**
-	 * Filter the project_key variable to support other methods of setting this value.
-	 *
-	 * @param string $project_key BugHerd project Key.
-	 * @return string
-	 * @since 1.0.0
-	 */
-	$project_key = apply_filters( 'bugherd_project_key', get_option( 'bugherd_project_key', '' ) );
-
-	if ( '' === $project_key ) {
+	// Prevent BugHerd from loading if any specified query parameter is present
+	if ( is_bugherd_disabled_by_query() ) {
 		return;
 	}
 
-	echo bugherd_get_the_script( $project_key ); // phpcs:ignore
+	$project_key = get_option( 'bugherd_project_key', '' );
+
+	if ( empty( $project_key ) ) {
+		return;
+	}
+
+	echo bugherd_get_the_script( $project_key ); 
 }
