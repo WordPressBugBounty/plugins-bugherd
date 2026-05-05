@@ -3,8 +3,8 @@ Contributors: claytoncollie
 Tags: admin, administration, tracking, integration, api, bug, bugtracking, bugherd, bug-tracking, todo, projects, project-management
 Requires at least: 4.7
 Requires PHP: 5.6
-Tested up to: 6.6
-Stable tag: 1.0.14
+Tested up to: 6.9.4
+Stable tag: 1.0.16
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -120,6 +120,10 @@ Absolutely! Our support team would love to help you out. You can email us at sup
 [View more information here](https://support.bugherd.com/en/articles/84872-Install-the-BugHerd-Wordpress-plugin).
 
 == Changelog ==
+
+= 1.0.16 =
+* Bump tested support to v6.9.4
+* Bump stable tag
 
 = 1.0.14
 * Users can add `?disable_bugherd` (or any defined query params) to prevent BugHerd from loading. Useful where BugHerd might conflict with theme builders like BricksBuilder.

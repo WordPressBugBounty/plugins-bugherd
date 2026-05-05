@@ -18,7 +18,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 function bugherd_get_the_script( $project_key ) {
 	return sprintf(
-		'<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?apikey=%s" async="true"></script>',
+		'<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?utm_source=wordpress&apikey=%s" async="true"></script>',
 		esc_html( $project_key )
 	);
 }
