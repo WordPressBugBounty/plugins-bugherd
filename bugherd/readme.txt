@@ -1,10 +1,10 @@
 === BugHerd ===
 Contributors: claytoncollie
-Tags: admin, administration, tracking, integration, api, bug, bugtracking, bugherd, bug-tracking, todo, projects, project-management
+Tags: feedback, qa, bug, bugtracking, bug-tracking
 Requires at least: 4.7
 Requires PHP: 5.6
 Tested up to: 6.9.4
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -120,6 +120,10 @@ Absolutely! Our support team would love to help you out. You can email us at sup
 [View more information here](https://support.bugherd.com/en/articles/84872-Install-the-BugHerd-Wordpress-plugin).
 
 == Changelog ==
+
+= 1.0.17 =
+* Update readme tags
+* Bump stable tag
 
 = 1.0.16 =
 * Bump tested support to v6.9.4
