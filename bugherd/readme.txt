@@ -4,15 +4,15 @@ Tags: feedback, bug tracking, website feedback, client feedback, visual feedback
 Requires at least: 4.7
 Requires PHP: 5.6
 Tested up to: 6.9.4
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Collect visual feedback and bug reports directly on your WordPress site. No code changes. No client logins. Syncs to Jira, Asana, ClickUp, Linear and more.
+Client feedback on your WordPress site made ridiculously easy. No code changes or client logins. Syncs to Jira, Asana, ClickUp and more.
 
 == Description ==
 
-[BugHerd](https://bugherd.com/?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page) makes getting client feedback on websites ridiculously easy. They simply point, click and comment - BugHerd grabs a screenshot, saves technical details and creates a task for your team to track.
+With [BugHerd](https://bugherd.com/?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page) it’s so easy for clients to provide website feedback. They simply point, click and comment - BugHerd grabs a screenshot, saves technical details and creates a task for your team to track.
 
 Install the BugHerd plugin once, send your clients or stakeholders a link, and they can start pinning feedback right away, directly onto any element of your live or WordPress staging site - no code changes, no browser extension, no client login or account setup required.
 
@@ -44,7 +44,7 @@ A screenshot along with browser type, OS, screen resolution, and the exact URL a
 Clients don't need to create an account or install anything. Send them a link to your BugHerd project and they can start leaving feedback immediately, directly on the page, in their browser. [Learn more](https://support.bugherd.com/en/articles/11424313-get-feedback-from-clients-on-websites-and-files?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Task Tracking
-Every comment becomes a trackable task on a Kanban board, so your team can prioritize and resolve feedback easier than ever. If you’re already using a PM tool? Send tasks there with one click. [Learn more](https://bugherd.com/feature/integrated-kanban-board?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
+Every comment becomes a trackable task on a Kanban board, so your team can prioritize and resolve feedback easier than ever. Already using a PM tool? Send tasks there with one click. [Learn more](https://bugherd.com/feature/integrated-kanban-board?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Deep two-way integrations
 BugHerd has true two-way integrations with all major project management tools, such as Jira, ClickUp, monday.com, Asana, and more; as well as supporting integrations with collaboration tools like Slack & MS Teams, and developer tools like GitHub.  BugHerd also has a fully featured API and Webhook support enabling custom integrations with any application. [Learn more](https://bugherd.com/integrations?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
@@ -75,7 +75,7 @@ All BugHerd plans include a free 7-day trial. No credit card required.
 1. Log in to your WordPress Admin.
 2. Go to Plugins → Add New.
 3. Search for "BugHerd" and click Install Now, then Activate.
-4. Go to Settings → BugHerd and enter your Project Key (find it in your BugHerd project under Settings).
+4. Go to Settings → BugHerd and enter your Project Key (find it in your BugHerd project under "Settings" > "General Settings").
 5. Optionally enable "Show BugHerd on WP Admin pages" to collect feedback on Admin pages too.
 6. Open your site — the BugHerd sidebar appears on the right, ready for feedback.
 
@@ -131,6 +131,10 @@ Log in to your BugHerd account, open the relevant project, and go to Settings. Y
 
 
 == Changelog ==
+
+= 1.0.20 =
+* Updated plugin page imagery
+* Bump stable tag
 
 = 1.0.19 =
 * Fix broken links in plugin directory description
