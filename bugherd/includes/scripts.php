@@ -14,13 +14,45 @@ if ( ! defined( 'WPINC' ) ) {
  * Get the tracking script.
  *
  * @param string $project_key BugHerd project Key.
+ * @param string $script_url  Script URL without query string.
  * @return string
  */
-function bugherd_get_the_script( $project_key ) {
+function bugherd_get_the_script( $project_key, $script_url = 'https://www.bugherd.com/sidebarv2.js' ) {
 	return sprintf(
-		'<script type="text/javascript" src="https://www.bugherd.com/sidebarv2.js?utm_source=wordpress&apikey=%s" async="true"></script>',
+		'<script type="text/javascript" src="%s?utm_source=wordpress&apikey=%s" async="true"></script>',
+		esc_url( $script_url ),
 		esc_html( $project_key )
 	);
+}
+
+/**
+ * Whether the current admin screen loads scripts under WP 7.1+ Document-Isolation-Policy (CORS).
+ *
+ * @return bool
+ */
+function bugherd_is_document_isolated_block_editor_screen() {
+	if ( ! function_exists( 'get_current_screen' ) ) {
+		return false;
+	}
+
+	$screen = get_current_screen();
+	if ( ! $screen ) {
+		return false;
+	}
+
+	if ( $screen->is_block_editor() ) {
+		return true;
+	}
+
+	if ( 'site-editor' === $screen->id ) {
+		return true;
+	}
+
+	if ( 'widgets' === $screen->id && function_exists( 'wp_use_widgets_block_editor' ) && wp_use_widgets_block_editor() ) {
+		return true;
+	}
+
+	return false;
 }
 
 /**
@@ -84,5 +116,10 @@ function bugherd_do_the_admin_script() {
 		return;
 	}
 
-	echo bugherd_get_the_script( $project_key ); 
+	$script_url = 'https://www.bugherd.com/sidebarv2.js';
+	if ( bugherd_is_document_isolated_block_editor_screen() ) {
+		$script_url = 'https://sidebar.bugherd.com/embed.js';
+	}
+
+	echo bugherd_get_the_script( $project_key, $script_url );
 }
