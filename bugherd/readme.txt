@@ -4,7 +4,7 @@ Tags: feedback, bug tracking, website feedback, client feedback, visual feedback
 Requires at least: 4.7
 Requires PHP: 5.6
 Tested up to: 6.9.4
-Stable tag: 1.0.22
+Stable tag: 1.0.23
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -131,6 +131,9 @@ Log in to your BugHerd account, open the relevant project, and go to Settings. Y
 
 
 == Changelog ==
+
+= 1.0.23 =
+* Load the sidebar in the WordPress 7.1 editor
 
 = 1.0.22 =
 * Fix release publishing on the GitHub Actions runner

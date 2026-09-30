@@ -26,6 +26,48 @@ function bugherd_get_the_script( $project_key, $script_url = 'https://www.bugher
 }
 
 /**
+ * Whether the admin sidebar should be printed on this request.
+ *
+ * @return bool
+ */
+function bugherd_admin_script_is_enabled() {
+	$enable_admin = filter_var( get_option( 'bugherd_enable_admin', false ), FILTER_VALIDATE_BOOLEAN );
+
+	if ( ! $enable_admin || is_bugherd_disabled_by_query() ) {
+		return false;
+	}
+
+	$project_key = get_option( 'bugherd_project_key', '' );
+
+	return ! empty( $project_key );
+}
+
+/**
+ * Keep the admin sidebar on the normal script load.
+ *
+ * WordPress 7.1 isolates block-editor screens and adds crossorigin="anonymous"
+ * to external scripts. That asks sidebarv2.js for CORS headers. Other BugHerd
+ * installs never send that request. Skipping client-side media processing on
+ * these screens leaves the script load unchanged. Image uploads still run on
+ * the server.
+ *
+ * @param bool $enabled Whether WordPress should isolate the editor document.
+ * @return bool
+ */
+function bugherd_keep_sidebar_on_standard_script_load( $enabled ) {
+	if ( ! is_admin() || ! bugherd_admin_script_is_enabled() ) {
+		return $enabled;
+	}
+
+	if ( ! bugherd_is_document_isolated_block_editor_screen() ) {
+		return $enabled;
+	}
+
+	return false;
+}
+add_filter( 'wp_client_side_media_processing_enabled', 'bugherd_keep_sidebar_on_standard_script_load' );
+
+/**
  * Whether the current admin screen loads scripts under WP 7.1+ Document-Isolation-Policy (CORS).
  *
  * @return bool
@@ -98,28 +140,11 @@ function bugherd_do_the_frontend_script() {
  */
 add_action( 'admin_head', 'bugherd_do_the_admin_script' );
 function bugherd_do_the_admin_script() {
-	$enable_admin = filter_var( get_option( 'bugherd_enable_admin', false ), FILTER_VALIDATE_BOOLEAN );
-
-	// If admin mode is disabled in settings, don't load BugHerd
-	if ( ! $enable_admin ) {
-		return;
-	}
-
-	// Prevent BugHerd from loading if any specified query parameter is present
-	if ( is_bugherd_disabled_by_query() ) {
+	if ( ! bugherd_admin_script_is_enabled() ) {
 		return;
 	}
 
 	$project_key = get_option( 'bugherd_project_key', '' );
 
-	if ( empty( $project_key ) ) {
-		return;
-	}
-
-	$script_url = 'https://www.bugherd.com/sidebarv2.js';
-	if ( bugherd_is_document_isolated_block_editor_screen() ) {
-		$script_url = 'https://sidebar.bugherd.com/embed.js';
-	}
-
-	echo bugherd_get_the_script( $project_key, $script_url );
+	echo bugherd_get_the_script( $project_key );
 }
