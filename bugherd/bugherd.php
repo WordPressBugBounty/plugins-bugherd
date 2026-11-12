@@ -6,7 +6,7 @@
  * Author:          BugHerd
  * Author URI:      https://bugherd.com
  * Text Domain:     bugherd
- * Version:         1.0.23
+ * Version:         1.0.24
  * License:         GPLv3 or later
  *
  * @package         BugHerd

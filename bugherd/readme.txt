@@ -1,20 +1,20 @@
 === BugHerd ===
 Contributors: bugherd
-Tags: feedback, bug tracking, website feedback, client feedback, visual feedback
+Tags: bug-tracking, client feedback, website proofing, visual feedback, website feedback
 Requires at least: 4.7
 Requires PHP: 5.6
-Tested up to: 6.9.4
-Stable tag: 1.0.23
+Tested up to: 7.1
+Stable tag: 1.0.24
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Client feedback on your WordPress site made ridiculously easy. No code changes or client logins. Syncs to Jira, Asana, ClickUp and more.
+Website feedback, online proofing and bug tracking on your WordPress site. No code or client logins. Syncs with Jira, Asana, ClickUp and more.
 
 == Description ==
 
-With [BugHerd](https://bugherd.com/?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page) it’s so easy for clients to provide website feedback. They simply point, click and comment - BugHerd grabs a screenshot, saves technical details and creates a task for your team to track.
+[BugHerd](https://bugherd.com/?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page) is a website feedback, online proofing and bug tracking tool for web agencies and their clients. Clients simply point, click and comment. BugHerd grabs a screenshot, saves technical details and creates a task for your team to track.
 
-Install the BugHerd plugin once, send your clients or stakeholders a link, and they can start pinning feedback right away, directly onto any element of your live or WordPress staging site - no code changes, no browser extension, no client login or account setup required.
+Install the BugHerd plugin once, send your clients or stakeholders a link, and they can start pinning feedback right away, directly onto any element of your live or WordPress staging site – no code changes, no browser extension, no client login or account setup required.
 
 Used by web agencies, in-house dev teams, QA testers, freelancers, and marketing teams worldwide, the BugHerd visual website feedback and bug tracking tool is trusted by over 350,000 people across 10,000+ companies in 172 countries.
 
@@ -22,62 +22,72 @@ Every piece of feedback automatically captures a screenshot plus full technical 
 
 Feedback flows straight into BugHerd's built-in Kanban board, or syncs with your favorite developer or PM tools.
 
+### How it works
 
-## How it works
+https://www.youtube.com/watch?v=RFPtCE4mgIs
 
-[youtube https://www.youtube.com/watch?v=RFPtCE4mgIs]
+### Get Started with BugHerd in Minutes
 
-## Get Started with BugHerd in Minutes
 **Step 1:** Install the plugin from your WordPress dashboard
 **Step 2:** Create your first project
 **Step 3:** Invite your team and clients to leave feedback
 
+### BugHerd Key Features
 
-== BugHerd Key Features ==
 #### Feedback pinned to the exact element on a web page
-Clients and teammates click any element on your live WordPress site or WP Admin to leave a comment. Feedback is anchored to that specific element so your developer knows exactly what needs fixing - no more vague emails. [Learn more](https://bugherd.com/feature/easy-website-annotations?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
+
+Clients and teammates click any element on your live WordPress site or WP Admin to leave a comment. Feedback is anchored to that specific element so your developer knows exactly what needs fixing – no more vague emails. [Learn more](https://bugherd.com/feature/easy-website-annotations?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Automatic screenshot & full technical data captured
+
 A screenshot along with browser type, OS, screen resolution, and the exact URL are all captured automatically with every piece of feedback. Your team gets everything they need to reproduce and fix an issue without a single follow-up question. [Learn more](https://bugherd.com/feature/actionable-bug-reports?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### No client account or login required
+
 Clients don't need to create an account or install anything. Send them a link to your BugHerd project and they can start leaving feedback immediately, directly on the page, in their browser. [Learn more](https://support.bugherd.com/en/articles/11424313-get-feedback-from-clients-on-websites-and-files?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Task Tracking
+
 Every comment becomes a trackable task on a Kanban board, so your team can prioritize and resolve feedback easier than ever. Already using a PM tool? Send tasks there with one click. [Learn more](https://bugherd.com/feature/integrated-kanban-board?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Deep two-way integrations
-BugHerd has true two-way integrations with all major project management tools, such as Jira, ClickUp, monday.com, Asana, and more; as well as supporting integrations with collaboration tools like Slack & MS Teams, and developer tools like GitHub.  BugHerd also has a fully featured API and Webhook support enabling custom integrations with any application. [Learn more](https://bugherd.com/integrations?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
+
+BugHerd has true two-way integrations with all major project management tools, such as Jira, ClickUp, monday.com, Asana, and more; as well as supporting integrations with collaboration tools like Slack & MS Teams, and developer tools like GitHub. BugHerd also has a fully featured API and Webhook support enabling custom integrations with any application. [Learn more](https://bugherd.com/integrations?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Video feedback for complex issues
+
 For feedback that's hard to describe in text, clients and teammates can record a short video walkthrough directly on a web page. The recording attaches to the task alongside a screenshot and user metadata. [Learn more](https://bugherd.com/feature/video-feedback?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
 #### Public feedback widget for ongoing feedback on live sites
+
 Visitors can QA your website and leave comments even after your website project has finished. The always-on public widget runs a continuous feedback loop on your live WordPress site. [Learn more](https://bugherd.com/feature/public-feedback?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
+#### AI coding agents with BugHerd MCP
 
-== Who uses BugHerd ==
-- **Web development agencies** collecting client feedback on builds, redesigns, and ongoing maintenance
-- **In-house dev and QA teams** managing bug reports during UAT and pre-launch testing
-- **Marketing teams** getting sign-off on landing pages, campaign pages, and content updates
-- **Freelancers** who want to look professional and cut down on client email threads
-- **Product teams** running continuous feedback cycles on live web applications
+BugHerd MCP connects your feedback directly to AI coding agents like Claude Code and Cursor, so they can triage, update and action tasks for you. Fewer routine fixes for your team, faster turnaround for your clients. [Learn more](https://bugherd.com/feature/mcp?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page)
 
+### Who uses BugHerd
 
-== Get started with BugHerd ==
+* **Web development agencies** collecting client feedback on builds, redesigns, and ongoing maintenance
+* **In-house dev and QA teams** managing bug reports during UAT and pre-launch testing
+* **Marketing teams** getting sign-off on landing pages, campaign pages, and content updates
+* **Freelancers** who want to look professional and cut down on client email threads
+* **Product teams** running continuous feedback cycles on live web applications
+
+### Get started with BugHerd
 
 All BugHerd plans include a free 7-day trial. No credit card required.
+
 [Start your free trial](https://www.bugherd.com/users/registrations/new?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page) or [book a 1:1](https://bugherd.com/book-a-demo?utm_source=wordpress&utm_medium=plugin_directory&utm_campaign=Details_page) demo with a BugHerd product specialist.
 
-
-== How to install the BugHerd WordPress plugin ==
+### How to install the BugHerd WordPress plugin
 
 1. Log in to your WordPress Admin.
 2. Go to Plugins → Add New.
 3. Search for "BugHerd" and click Install Now, then Activate.
 4. Go to Settings → BugHerd and enter your Project Key (find it in your BugHerd project under "Settings" > "General Settings").
 5. Optionally enable "Show BugHerd on WP Admin pages" to collect feedback on Admin pages too.
-6. Open your site — the BugHerd sidebar appears on the right, ready for feedback.
+6. Open your site. The BugHerd sidebar appears on the right, ready for feedback.
 
 **Need help installing BugHerd?** Follow the [BugHerd WordPress Installation Guide](https://support.bugherd.com/en/articles/11425578-install-the-bugherd-wordpress-plugin) for help or email [support@bugherd.com](mailto:support@bugherd.com)
 
@@ -131,6 +141,9 @@ Log in to your BugHerd account, open the relevant project, and go to Settings. Y
 
 
 == Changelog ==
+
+= 1.0.24 =
+* update description
 
 = 1.0.23 =
 * Load the sidebar in the WordPress 7.1 editor
